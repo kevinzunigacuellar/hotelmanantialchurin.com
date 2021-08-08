@@ -79,7 +79,7 @@ export default function Navbar() {
                       router.asPath === href
                         ? 'bg-gray-900 text-white'
                         : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'block px-3 py-2 rounded-md text-base font-medium font-lato'
+                      'block px-3 py-2 rounded-md text-base font-medium'
                     )}>
                     {name}
                   </a>

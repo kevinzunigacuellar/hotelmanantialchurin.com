@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      spacing: {
+        '5/6': '83.333333%',
       },
     },
   },

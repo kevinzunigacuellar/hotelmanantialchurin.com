@@ -1,3 +1,15 @@
+import InfoCard from 'components/InfoCard'
+import Title from 'components/Title'
+import { CARDS_TURISMO } from 'data/turismo'
 export default function Turismo() {
-  return <pre>this is my Turismo page</pre>
+  return (
+    <>
+      <Title>¿A donde ir en Churín?</Title>
+      <div className='flex flex-col space-y-8'>
+        {CARDS_TURISMO.map(({ title, description, img }) => (
+          <InfoCard img={img} title={title} description={description} />
+        ))}
+      </div>
+    </>
+  )
 }

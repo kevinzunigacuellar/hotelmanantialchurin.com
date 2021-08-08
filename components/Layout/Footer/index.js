@@ -15,7 +15,7 @@ export default function Footer() {
       <div className='flex flex-wrap justify-center p-2 space-x-3'>
         {navigation.map(({ name, href }) => (
           <Link href={href} key={name}>
-            <div className='p-2 cursor-pointer antialiased rounded-lg  text-lg text-gray-500 hover:text-gray-800 font-semibold font-lato'>
+            <div className='p-2 cursor-pointer antialiased rounded-lg  text-lg text-gray-500 hover:text-gray-800 font-semibold'>
               <a>{name}</a>
             </div>
           </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
         <span>
           <MdCopyright className='w-4 h-4 fill-current' />
         </span>
-        <p className='antialiased text-md text-center font-lato'>{`${new Date().getFullYear()} Hotel Manantial. Todos los derechos reservados.`}</p>
+        <p className='antialiased text-md text-center'>{`${new Date().getFullYear()} Hotel Manantial. Todos los derechos reservados.`}</p>
       </div>
     </footer>
   )

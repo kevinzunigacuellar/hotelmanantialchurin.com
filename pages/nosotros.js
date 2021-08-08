@@ -1,3 +1,9 @@
+import Gallery from 'components/Gallery'
+
 export default function Nosotros() {
-  return <pre>this is my nosostros page</pre>
+  return (
+    <>
+      <Gallery />
+    </>
+  )
 }
