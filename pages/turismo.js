@@ -6,8 +6,13 @@ export default function Turismo() {
     <>
       <Title>¿A donde ir en Churín?</Title>
       <div className='flex flex-col space-y-8'>
-        {CARDS_TURISMO.map(({ title, description, img }) => (
-          <InfoCard img={img} title={title} description={description} />
+        {CARDS_TURISMO.map(({ title, description, img, id }) => (
+          <InfoCard
+            img={img}
+            title={title}
+            description={description}
+            key={id}
+          />
         ))}
       </div>
     </>

@@ -18,7 +18,7 @@ function Example({ img, price, title, description }) {
             </p>
             <p className='mt-2 text-gray-500 text-md'>{description}</p>
             <div className='mt-2'>
-              {`S/.${price}.00 `}
+              {`S/. ${price}.00 `}
               <span className='text-gray-600 text-sm'>/ noche</span>
             </div>
           </div>
@@ -33,8 +33,9 @@ export default function Habitaciones() {
     <>
       <Title>Habitaciones</Title>
       <div className='flex flex-col lg:flex-row gap-8 justify-center items-center'>
-        {CARDS_HABITACIONES.map(({ img, title, price, description }) => (
+        {CARDS_HABITACIONES.map(({ img, title, price, description, id }) => (
           <Example
+            key={id}
             img={img}
             title={title}
             price={price}

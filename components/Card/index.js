@@ -30,14 +30,6 @@ export default function Card({ img, title, description, tags, url, price }) {
               ))}
             </div>
           )}
-          {price && (
-            <>
-              <p className='mt-2 text-gray-800 text-md'>
-                {`S/.${price}`}
-                <span className='text-gray-500 text-sm'>{' /noche'}</span>
-              </p>
-            </>
-          )}
         </div>
       </div>
     </div>
