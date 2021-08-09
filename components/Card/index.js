@@ -1,5 +1,6 @@
 import Link from 'next/link'
-export default function Card({ img, title, description, tags, url, price }) {
+
+export default function Card({ img, title, description, tags, url }) {
   return (
     <div className='max-w-md md:max-w-full xl:max-w-md bg-white rounded-xl shadow-md overflow-hidden'>
       <div className='md:flex xl:flex-col'>

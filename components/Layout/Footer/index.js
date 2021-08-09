@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { MdCopyright } from 'react-icons/md'
+
 const navigation = [
   { name: 'Nosotros', href: '/nosotros' },
   { name: 'Habitaciones', href: '/habitaciones' },
@@ -15,9 +16,9 @@ export default function Footer() {
       <div className='flex flex-wrap justify-center p-2 space-x-3'>
         {navigation.map(({ name, href }) => (
           <Link href={href} key={name}>
-            <div className='p-2 cursor-pointer antialiased rounded-lg  text-md text-gray-500 hover:text-gray-800 font-semibold'>
-              <a>{name}</a>
-            </div>
+            <a className='p-2 cursor-pointer antialiased rounded-lg  text-md text-gray-500 hover:text-gray-800 font-semibold'>
+              {name}
+            </a>
           </Link>
         ))}
       </div>
