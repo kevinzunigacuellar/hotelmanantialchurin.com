@@ -19,6 +19,9 @@ export default function CardBoxOverlay({ img, price, title, description }) {
               <span className='font-medium'>{`S/. ${price}.00 `}</span>
               <span className='text-gray-600 text-sm'>/noche</span>
             </div>
+            <p className='mt-2 text-gray-500 text-xs'>
+              Precio no valido para feriados
+            </p>
           </div>
         </div>
       </div>

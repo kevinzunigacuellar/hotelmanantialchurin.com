@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { MdCopyright } from 'react-icons/md'
-
+import { LocationMarkerIcon } from '@heroicons/react/outline'
 const navigation = [
   { name: 'Nosotros', href: '/nosotros' },
   { name: 'Habitaciones', href: '/habitaciones' },
@@ -16,7 +16,7 @@ export default function Footer() {
       <div className='flex flex-wrap justify-center p-2 space-x-3'>
         {navigation.map(({ name, href }) => (
           <Link href={href} key={name}>
-            <a className='p-2 cursor-pointer antialiased rounded-lg  text-md text-gray-500 hover:text-gray-800 font-semibold'>
+            <a className='p-2 cursor-pointer antialiased rounded-lg text-md text-gray-500 hover:text-gray-800 font-semibold'>
               {name}
             </a>
           </Link>
@@ -32,12 +32,15 @@ export default function Footer() {
         <a href='https://wa.me/+51992755015'>
           <FaWhatsapp className='w-6 h-6 fill-current hover:text-gray-700' />
         </a>
+        <a href='https://g.page/hotelmanantialchurin?share'>
+          <LocationMarkerIcon className='w-6 h-6 hover:text-gray-700' />
+        </a>
       </div>
-      <div className='flex justify-center items-center p-2 text-gray-400'>
-        <span>
-          <MdCopyright className='w-4 h-4 fill-current' />
-        </span>
-        <p className='antialiased text-md text-center'>{`${new Date().getFullYear()} Hotel Manantial. Todos los derechos reservados.`}</p>
+      <div className='flex center-items justify-center text-gray-400'>
+        <MdCopyright className='w-4 h-4 fill-current' />
+        <p className='antialiased text-xs'>
+          {`${new Date().getFullYear()} Hotel Manantial. Todos los derechos reservados.`}
+        </p>
       </div>
     </footer>
   )
