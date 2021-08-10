@@ -19,7 +19,7 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className='bg-bgray-700'>
       {({ open }) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -39,12 +39,12 @@ export default function Navbar() {
                 <div className='flex-shrink-0 flex items-center'>
                   <img
                     className='block lg:hidden h-8 w-auto'
-                    src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
+                    src='/ventana.svg'
                     alt='Workflow'
                   />
                   <img
                     className='hidden lg:block h-8 w-auto'
-                    src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg'
+                    src='logo5.svg'
                     alt='Workflow'
                   />
                 </div>
@@ -55,8 +55,8 @@ export default function Navbar() {
                         <a
                           className={classNames(
                             router.asPath === href
-                              ? 'bg-gray-900 text-white'
-                              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                              ? 'bg-bgray-900 text-white'
+                              : 'text-gray-100 hover:bg-bgray-800 hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
                           )}>
                           {name}
@@ -77,8 +77,8 @@ export default function Navbar() {
                     href={href}
                     className={classNames(
                       router.asPath === href
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        ? 'bg-bgray-900 text-white'
+                        : 'text-gray-100 hover:bg-bgray-800 hover:text-white',
                       'block px-3 py-2 rounded-md text-base font-medium'
                     )}>
                     {name}
