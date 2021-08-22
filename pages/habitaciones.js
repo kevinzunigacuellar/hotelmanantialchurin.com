@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Title from 'components/Title'
 import CardBoxOverlay from 'components/CardBoxOverlay'
 
-export default function Habitaciones() {
+export default function Habitaciones({ CARDS_HABITACIONES }) {
   return (
     <>
       <Head>
@@ -24,4 +24,8 @@ export default function Habitaciones() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  return { props: { CARDS_HABITACIONES } }
 }

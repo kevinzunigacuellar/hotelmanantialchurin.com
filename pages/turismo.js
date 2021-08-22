@@ -2,7 +2,7 @@ import InfoCard from 'components/InfoCard'
 import Title from 'components/Title'
 import { CARDS_TURISMO } from 'data/turismo'
 import Head from 'next/head'
-export default function Turismo() {
+export default function Turismo({ CARDS_TURISMO }) {
   return (
     <>
       <Head>
@@ -22,4 +22,12 @@ export default function Turismo() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      CARDS_TURISMO,
+    },
+  }
 }

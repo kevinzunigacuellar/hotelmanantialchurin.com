@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Gallery from 'components/Gallery'
+import { GALLERY_DATA } from 'data/nosotros'
 import Title from 'components/Title'
 
-export default function Nosotros() {
+export default function Nosotros({ GALLERY_DATA }) {
   return (
     <>
       <Head>
@@ -10,7 +11,11 @@ export default function Nosotros() {
         <link rel='icon' href='/ventana.svg' />
       </Head>
       <Title>Galeria de fotos</Title>
-      <Gallery />
+      <Gallery GALLERY_DATA={GALLERY_DATA} />
     </>
   )
+}
+
+export async function getStaticProps() {
+  return { props: { GALLERY_DATA } }
 }

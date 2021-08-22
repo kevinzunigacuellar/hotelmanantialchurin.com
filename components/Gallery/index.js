@@ -1,12 +1,18 @@
-import { GALLERY_DATA } from 'data/nosotros'
-
-export default function Gallery() {
+import Image from 'next/image'
+export default function Gallery({ GALLERY_DATA }) {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
-      {GALLERY_DATA.map(({ div, img, id }) => {
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center'>
+      {GALLERY_DATA.map(({ img, id }) => {
         return (
-          <div className={div.style} key={id}>
-            <img className={img.style} src={img.src} alt={img.alt}></img>
+          <div
+            className='relative rounded-lg overflow-hidden h-80 w-full max-w-2xl lg:max-w-3xl xl:h-96'
+            key={id}>
+            <Image
+              className='absolute object-cover w-full h-full'
+              src={img.src}
+              alt={img.alt}
+              layout='fill'
+            />
           </div>
         )
       })}
