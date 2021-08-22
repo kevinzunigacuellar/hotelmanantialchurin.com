@@ -1,12 +1,15 @@
+import Image from 'next/image'
 export default function CardBoxOverlay({ img, price, title, description }) {
   return (
     <div className='antialiased text-gray-900'>
       <div className='max-w-lg'>
         <div className='relative pb-5/6'>
-          <img
+          <Image
             className='absolute h-full w-full object-cover rounded-lg shadow-md'
             src={img}
             alt={title}
+            layout='fill'
+            quality={100}
           />
         </div>
         <div className='relative px-4 -mt-16'>
