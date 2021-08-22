@@ -4,7 +4,7 @@ import { CARDS_INICIO, INFO_CARD_INICIO } from 'data/inicio'
 import InfoCard from 'components/InfoCard'
 import Title from 'components/Title'
 
-export default function Home() {
+export default function Home({CARDS_INICIO, INFO_CARD_INICIO }) {
   return (
     <>
       <Head>
@@ -29,4 +29,13 @@ export default function Home() {
       />
     </>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      CARDS_INICIO,
+      INFO_CARD_INICIO
+    }
+  }
 }

@@ -15,7 +15,7 @@ export const CARDS_INICIO = [
     id: 2,
     title: 'Contacto',
     description:
-      'El Hotel Manantial se enorgullese de tener la mejor atencion en churin al precio mas bajo.',
+      'El Hotel Manantial se enorgullese de tener la mejor atencion en churin al precio mas bajo garantizadas.',
     url: '/contacto',
     tags: [
       { id: 1, name: '#seguridad' },
