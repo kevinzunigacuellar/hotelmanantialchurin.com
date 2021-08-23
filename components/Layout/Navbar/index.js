@@ -1,8 +1,9 @@
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import Logo from 'public/logo5.svg'
 const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Nosotros', href: '/nosotros' },
@@ -37,15 +38,12 @@ export default function Navbar() {
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-center'>
-                  <img
-                    className='block lg:hidden h-8 w-auto'
-                    src='/ventana.svg'
-                    alt='Workflow'
-                  />
-                  <img
-                    className='hidden lg:block h-8 w-auto'
-                    src='logo5.svg'
-                    alt='Workflow'
+                  <Image
+                    className='hidden lg:block'
+                    src={Logo}
+                    alt='hotel-manantial'
+                    height={32}
+                    width={137}
                   />
                 </div>
                 <div className='hidden sm:block sm:ml-6'>
