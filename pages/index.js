@@ -4,7 +4,7 @@ import { CARDS_INICIO, INFO_CARD_INICIO } from 'data/inicio'
 import InfoCard from 'components/InfoCard'
 import Title from 'components/Title'
 
-export default function Home({CARDS_INICIO, INFO_CARD_INICIO }) {
+export default function Home({ CARDS_INICIO, INFO_CARD_INICIO }) {
   return (
     <>
       <Head>
@@ -15,7 +15,6 @@ export default function Home({CARDS_INICIO, INFO_CARD_INICIO }) {
           name='description'
           content='Ofertas exclusivas para el Hotel Manantial de Churin. Reserve su hotel en Churin y obtenga una experiencia de primer nivel y las mejores tarifas, garantizadas.'
         />
-        <link rel='icon' href='/ventana.svg' />
       </Head>
 
       <div className='mb-6'>
@@ -35,7 +34,7 @@ export async function getStaticProps() {
   return {
     props: {
       CARDS_INICIO,
-      INFO_CARD_INICIO
-    }
+      INFO_CARD_INICIO,
+    },
   }
 }

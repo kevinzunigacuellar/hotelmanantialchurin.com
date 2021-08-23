@@ -6,7 +6,6 @@ export default function Contacto() {
     <>
       <Head>
         <title>Hotel Manantial de Churin | Contacto</title>
-        <link rel='icon' href='/ventana.svg' />
       </Head>
       <Title>Contacto</Title>
       <ContactInfo />

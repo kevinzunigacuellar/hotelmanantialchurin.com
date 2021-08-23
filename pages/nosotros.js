@@ -8,7 +8,6 @@ export default function Nosotros({ GALLERY_DATA }) {
     <>
       <Head>
         <title>Hotel Manantial de Churin | Nosotros</title>
-        <link rel='icon' href='/ventana.svg' />
       </Head>
       <Title>Galeria de fotos</Title>
       <Gallery GALLERY_DATA={GALLERY_DATA} />

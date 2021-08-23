@@ -1,6 +1,11 @@
 import Subtitle from 'components/Subtitle'
+import Image from 'next/image'
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineInstagram, AiOutlinePhone } from 'react-icons/ai'
+import bcp from 'public/bcp.png'
+import writeToWhatsapp from 'public/writetowhatsapp.png'
+import makeDeposit from 'public/transfer.jpg'
+import sendPicture from 'public/send-a-photo.jpg'
 
 export default function ContactInfo() {
   return (
@@ -34,7 +39,14 @@ export default function ContactInfo() {
         <div>
           <Subtitle>Cuenta Bancaria</Subtitle>
           <div className='flex items-center'>
-            <img src='/bcp.png' alt='bcp' className='w-16 sm:w-24 rounded-md' />
+            <div className='relative w-16 h-16 sm:w-24 sm:h-24 rounded-md overflow-hidden'>
+              <Image
+                src={bcp}
+                alt='bcp'
+                className='absolute w-full h-full object-cover'
+                layout='fill'
+              />
+            </div>
             <p className='p-4 text-gray-600 tracking-wide font-medium'>
               191-203-173-500-74
             </p>
@@ -64,11 +76,12 @@ export default function ContactInfo() {
         <Subtitle>¿Como hacer una reserva?</Subtitle>
         <div className='grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2 2xl:grid-cols-3'>
           <div>
-            <div className='w-full h-56 rounded-md overflow-hidden'>
-              <img
-                src='/writetowhatsapp.png'
+            <div className='relative w-80 h-56 rounded-md overflow-hidden'>
+              <Image
+                src={writeToWhatsapp}
                 alt='write to whatsapp'
-                className='object-cover w-full h-full'
+                className='absolute object-cover w-full h-full'
+                layout='fill'
               />
             </div>
             <p className='p-4 text-center text-gray-700 text-md font-medium'>
@@ -76,11 +89,12 @@ export default function ContactInfo() {
             </p>
           </div>
           <div>
-            <div className='w-full h-56 rounded-md overflow-hidden'>
-              <img
-                src='/transfer.jpg'
-                alt='write to whatsapp'
-                className='object-cover w-full h-full'
+            <div className='relative w-80 h-56 rounded-md overflow-hidden'>
+              <Image
+                src={makeDeposit}
+                alt='make-a-deposit'
+                className='absolute object-cover w-full h-full'
+                layout='fill'
               />
             </div>
             <p className='p-4 text-center text-gray-700 text-md font-medium'>
@@ -88,11 +102,12 @@ export default function ContactInfo() {
             </p>
           </div>
           <div>
-            <div className='w-full h-56 rounded-md overflow-hidden'>
-              <img
-                src='/send-a-photo.jpg'
-                alt='write to whatsapp'
-                className='object-cover w-full h-full'
+            <div className='relative w-80 h-56 rounded-md overflow-hidden'>
+              <Image
+                src={sendPicture}
+                alt='send-a-picture'
+                className='absolute object-cover w-full h-full'
+                layout='fill'
               />
             </div>
             <p className='p-4 text-center text-gray-700 text-md font-medium'>

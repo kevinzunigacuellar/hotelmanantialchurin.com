@@ -7,7 +7,6 @@ export default function Turismo({ CARDS_TURISMO }) {
     <>
       <Head>
         <title>Hotel Manantial de Churin | Turismo</title>
-        <link rel='icon' href='/ventana.svg' />
       </Head>
       <Title>¿A donde ir en Churín?</Title>
       <div className='flex flex-col space-y-8'>

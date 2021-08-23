@@ -8,7 +8,6 @@ export default function Habitaciones({ CARDS_HABITACIONES }) {
     <>
       <Head>
         <title>Hotel Manantial de Churin | Habicationes</title>
-        <link rel='icon' href='/ventana.svg' />
       </Head>
       <Title>Habitaciones</Title>
       <div className='flex flex-col lg:flex-row gap-8 justify-center items-center'>
