@@ -6,6 +6,7 @@ export default function Contacto() {
     <>
       <Head>
         <title>Hotel Manantial de Churin | Contacto</title>
+        <meta name='robots' content='noindex, nofollow' />
       </Head>
       <Title>Contacto</Title>
       <ContactInfo />

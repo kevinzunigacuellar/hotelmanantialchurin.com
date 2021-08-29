@@ -15,6 +15,7 @@ export default function Home({ CARDS_INICIO, INFO_CARD_INICIO }) {
           name='description'
           content='Ofertas exclusivas para el Hotel Manantial de Churin. Reserve su hotel en Churin y obtenga una experiencia de primer nivel y las mejores tarifas, garantizadas.'
         />
+        <meta name='robots' content='index, follow' />
       </Head>
 
       <div className='mb-6'>

@@ -30,7 +30,7 @@ export default function ContactInfo() {
               href='tel:012373052'>
               <AiOutlinePhone className='fill-current w-6 h-auto text-blue-600' />
               <div>
-                <p className='text-gray-600 text-sm'>Linea fija:</p>
+                <p className='text-gray-600 text-sm'>Línea fija:</p>
                 <p className='font-medium'>+51 1 2373052</p>
               </div>
             </a>
@@ -73,9 +73,9 @@ export default function ContactInfo() {
         </div>
       </div>
       <div className='border shadow-sm rounded-md px-8 py-6'>
-        <Subtitle>¿Como hacer una reserva?</Subtitle>
+        <Subtitle>¿Cómo hacer una reserva?</Subtitle>
         <div className='grid grid-cols-1 justify-items-center gap-4 lg:grid-cols-2 2xl:grid-cols-3'>
-          <div>
+          <div className='px-4'>
             <div className='relative w-80 h-56 rounded-md overflow-hidden'>
               <Image
                 src={writeToWhatsapp}
@@ -88,7 +88,7 @@ export default function ContactInfo() {
               1. Escribenos al WhatsApp
             </p>
           </div>
-          <div>
+          <div className='px-4'>
             <div className='relative w-80 h-56 rounded-md overflow-hidden'>
               <Image
                 src={makeDeposit}
@@ -98,7 +98,7 @@ export default function ContactInfo() {
               />
             </div>
             <p className='p-4 text-center text-gray-700 text-md font-medium'>
-              2. Deposita a la cuenta bancaria
+              2. Depósita a la cuenta bancaria
             </p>
           </div>
           <div>
@@ -111,7 +111,7 @@ export default function ContactInfo() {
               />
             </div>
             <p className='p-4 text-center text-gray-700 text-md font-medium'>
-              3. Mandanos el voucher
+              3. Envíanos el voucher
             </p>
           </div>
         </div>
