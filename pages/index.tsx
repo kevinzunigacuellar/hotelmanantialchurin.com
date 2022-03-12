@@ -2,7 +2,8 @@ import Card from 'components/Card'
 import CARDS_INFO from 'content/cards'
 import Container from 'components/Container'
 import lakeImg from 'public/photos/turismo_churin.jpeg'
-import Image from 'next/image'
+import Title from 'components/Title'
+import CardOverlay from 'components/CardOverlay'
 
 export default function Home() {
   return (
@@ -15,29 +16,14 @@ export default function Home() {
           <Card key={card.id} {...card} />
         ))}
       </div>
-      <h2 className="text-2xl font-semibold pb-4 text-gray-900">¿Que hacer en Churín?</h2>
-      <article>
-        <div className="block rounded-md overflow-hidden">
-          <Image
-            src={lakeImg}
-            alt="Huancahuasi"
-            layout="responsive"
-            className="h-full w-full aspect-video"
-            objectFit="cover"
-            placeholder="blur"
-          />
-        </div>
-        <div className="relative px-4 -mt-16 sm:-mt-20 sm:px-6">
-          <div className="bg-white p-6 rounded-md shadow-md">
-            <h3 className="font-semibold mb-2 text-lg text-gray-900">Aguas Termomediciales</h3>
-            <p className="text-gray-500">
-              Churín es famosa por las aguas que emanan de sus tierras a una temperatura de entre 35
+      <Title title="¿Que hacer en Churín?" />
+      <CardOverlay
+        title="Aguas Termomediciales"
+        img={lakeImg}
+        description="Churín es famosa por las aguas que emanan de sus tierras a una temperatura de entre 35
               y 55 grados °C. Los baños termales más visitados de la zona son: La Meseta, Baños de
-              La Juventud, Complejo Mamahuarmi, Baños de Tingo y muchos más.
-            </p>
-          </div>
-        </div>
-      </article>
+              La Juventud, Complejo Mamahuarmi, Baños de Tingo y muchos más."
+      />
     </Container>
   )
 }
