@@ -1,22 +1,54 @@
-import { MenuAlt3Icon, XIcon } from '@heroicons/react/outline'
+import { MenuAlt3Icon, XIcon, LocationMarkerIcon } from '@heroicons/react/outline'
 import { useState, ReactNode } from 'react'
 import Logo from 'components/Logo'
 import Link from 'next/link'
 import LargeLogo from 'components/LargeLogo'
-
-const NAVIGATION = [
-  { href: '/', name: 'Inicio' },
-  { href: '/nosotros', name: 'Nosotros' },
-  { href: '/habitaciones', name: 'Habitaciones' },
-  { href: '/contacto', name: 'Contacto' },
-  { href: '/turismo', name: 'Turismo' },
-]
+import NAVIGATION from 'content/navigation'
+import { FaFacebook, FaWhatsapp } from 'react-icons/fa'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { MdCopyright } from 'react-icons/md'
 
 function NavItem({ href, name }: { href: string; name: string }) {
   return (
     <Link href={href}>
       <a className="block text-sm hover:bg-gray-900 p-2 rounded-md sm:px-3 font-semibold">{name}</a>
     </Link>
+  )
+}
+
+export function Footer() {
+  return (
+    <footer className="bg-gray-100 py-8 mt-auto border-t border-gray-300">
+      <div className="flex flex-wrap justify-center p-2 space-x-3">
+        {NAVIGATION.map(({ name, href }) => (
+          <Link href={href} key={name}>
+            <a className="p-2 cursor-pointer antialiased rounded-lg text-md text-gray-500 hover:text-gray-800 font-semibold">
+              {name}
+            </a>
+          </Link>
+        ))}
+      </div>
+      <div className="flex justify-center p-2 space-x-5 text-gray-400">
+        <a href="https://www.facebook.com/hotelmanantialchurin/">
+          <FaFacebook className="w-6 h-6 fill-current hover:text-gray-700" />
+        </a>
+        <a href="https://www.instagram.com/hotelmanantialchurin/">
+          <AiOutlineInstagram className="w-6 h-6 fill-current hover:text-gray-700" />
+        </a>
+        <a href="https://wa.me/+51992755015">
+          <FaWhatsapp className="w-6 h-6 fill-current hover:text-gray-700" />
+        </a>
+        <a href="https://g.page/hotelmanantialchurin?share">
+          <LocationMarkerIcon className="w-6 h-6 hover:text-gray-700" />
+        </a>
+      </div>
+      <div className="flex center-items justify-center text-gray-400 mt-2">
+        <MdCopyright className="w-4 h-4 fill-current mr-2" />
+        <p className="antialiased text-xs">
+          {`${new Date().getFullYear()} Hotel Manantial. Todos los derechos reservados.`}
+        </p>
+      </div>
+    </footer>
   )
 }
 
@@ -59,7 +91,8 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Navbar />
-      <main className="max-w-5xl mx-auto px-4 py-6">{children}</main>
+      <main className="max-w-5xl mx-auto px-4 pt-6 pb-12">{children}</main>
+      <Footer />
     </>
   )
 }
