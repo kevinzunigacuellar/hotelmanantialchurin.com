@@ -40,6 +40,8 @@ export default function Contacto() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 mb-4">
           <a
             href="https://wa.me/+51992755015"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center space-x-4 hover:bg-gray-100 rounded-md p-2"
           >
             <FaWhatsapp className="h-6 w-auto fill-green-500" />
@@ -50,6 +52,8 @@ export default function Contacto() {
           </a>
           <a
             href="tel:012373052"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center space-x-4 hover:bg-gray-100 rounded-md p-2"
           >
             <PhoneIcon className="h-6 w-auto stroke-blue-500" />
@@ -75,6 +79,8 @@ export default function Contacto() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
           <a
             href="https://www.facebook.com/hotelmanantialchurin/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center p-2 hover:bg-gray-100 rounded-md space-x-3"
           >
             <FaFacebook className="h-8 w-auto text-blue-500" />
@@ -82,6 +88,8 @@ export default function Contacto() {
           </a>
           <a
             href="https://www.instagram.com/hotelmanantialchurin/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center p-2 hover:bg-gray-100 rounded-md space-x-3"
           >
             <AiOutlineInstagram className="h-8 w-auto fill-pink-600" />

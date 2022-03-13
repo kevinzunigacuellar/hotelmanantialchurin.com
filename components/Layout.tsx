@@ -29,16 +29,28 @@ export function Footer() {
         ))}
       </div>
       <div className="flex justify-center p-2 space-x-5 text-gray-400">
-        <a href="https://www.facebook.com/hotelmanantialchurin/">
+        <a
+          href="https://www.facebook.com/hotelmanantialchurin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaFacebook className="w-6 h-6 fill-current hover:text-gray-700" />
         </a>
-        <a href="https://www.instagram.com/hotelmanantialchurin/">
+        <a
+          href="https://www.instagram.com/hotelmanantialchurin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiOutlineInstagram className="w-6 h-6 fill-current hover:text-gray-700" />
         </a>
-        <a href="https://wa.me/+51992755015">
+        <a href="https://wa.me/+51992755015" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="w-6 h-6 fill-current hover:text-gray-700" />
         </a>
-        <a href="https://g.page/hotelmanantialchurin?share">
+        <a
+          href="https://g.page/hotelmanantialchurin?share"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LocationMarkerIcon className="w-6 h-6 hover:text-gray-700" />
         </a>
       </div>
