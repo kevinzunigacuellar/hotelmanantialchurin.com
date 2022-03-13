@@ -18,6 +18,7 @@ export default function Card({ img, title, description, url }: CardProps) {
             alt={title}
             layout="responsive"
             objectFit="cover"
+            sizes="(max-width: 640px) 100vw, 40vw"
             placeholder="blur"
           />
         </figure>
