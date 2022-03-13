@@ -13,7 +13,7 @@ export default function CardOverlay({
 }) {
   return (
     <article>
-      <div className="block rounded-md overflow-hidden">
+      <figure className="block rounded-md overflow-hidden">
         <Image
           src={img}
           alt={title}
@@ -22,7 +22,7 @@ export default function CardOverlay({
           objectFit="cover"
           placeholder="blur"
         />
-      </div>
+      </figure>
       <div className="relative px-4 -mt-16 sm:-mt-20 sm:px-6">
         <div className="bg-white p-6 rounded-md shadow-md">
           <h2 className="font-semibold mb-2 text-lg text-gray-900">{title}</h2>

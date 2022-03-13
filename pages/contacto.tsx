@@ -11,15 +11,15 @@ export default function Contacto() {
   return (
     <Container title="Hotel Manantial de Churin | Contacto" description="">
       <Title title="Contacto" />
-      <div className="bg-white p-6 shadow rounded-md mb-8">
+      <section className="bg-white p-6 shadow rounded-md mb-8">
         <h2 className="text-lg font-semibold mb-2 text-gray-900">¿Cómo hacer una reserva?</h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {PASOS_RESERVA.map(({ id, step, imgSrc }) => (
-            <div key={id}>
+            <article key={id}>
               <figure className="block rounded-md overflow-hidden">
                 <Image
                   src={imgSrc}
-                  alt="deposit"
+                  alt={step}
                   layout="responsive"
                   className="h-full w-full"
                   objectFit="cover"
@@ -27,12 +27,12 @@ export default function Contacto() {
                 />
               </figure>
               <p className="text-center pt-4 font-semibold text-gray-600">{step}</p>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
       <Title title="Reservas" />
-      <div className="bg-white rounded-md shadow p-6">
+      <section className="bg-white rounded-md shadow p-6">
         <h2 className="text-lg font-semibold mb-2 text-gray-900">Teléfonos</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 mb-4">
           <a
@@ -56,8 +56,8 @@ export default function Contacto() {
             </p>
           </a>
         </div>
-        <h3 className="text-lg font-semibold mb-3 text-gray-900">Cuenta Bancaria</h3>
-        <div className="flex items-center mb-4">
+        <h2 className="text-lg font-semibold mb-3 text-gray-900">Cuenta Bancaria</h2>
+        <figure className="flex items-center mb-4">
           <Image
             src={bcpImg}
             width={100}
@@ -67,8 +67,8 @@ export default function Contacto() {
             placeholder="blur"
           />
           <p className="p-6 font-semibold text-gray-600">191-203-173-500-74</p>
-        </div>
-        <h3 className="text-lg font-semibold mb-3 text-gray-900">Redes sociales</h3>
+        </figure>
+        <h2 className="text-lg font-semibold mb-3 text-gray-900">Redes sociales</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8">
           <a
             href="https://www.facebook.com/hotelmanantialchurin/"
@@ -85,7 +85,7 @@ export default function Contacto() {
             <p className="text-sm text-gray-600">Instagram</p>
           </a>
         </div>
-      </div>
+      </section>
     </Container>
   )
 }

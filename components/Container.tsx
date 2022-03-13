@@ -23,11 +23,11 @@ export default function Container({ title, description, children }: ContainerPro
         <meta property="og:site_name" content="Hotel Manantial de Churin" />
         <meta property="og:description" content={description} />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content="https://www.hotelmanantialchurin.com/banner.jpg" />
+        <meta property="og:image" content="https://www.hotelmanantialchurin.com/banner.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://www.hotelmanantialchurin.com/banner.jpg" />
+        <meta name="twitter:image" content="https://www.hotelmanantialchurin.com/banner.png" />
       </Head>
       {children}
     </>

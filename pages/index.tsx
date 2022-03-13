@@ -11,11 +11,11 @@ export default function Home() {
       title="Hotel Manantial de Churin | Encuentre habitaciones de hotel en Churin"
       description="Ofertas exclusivas para el Hotel Manantial de Churin. Reserve su hotel en Churin y obtenga una experiencia de primer nivel y las mejores tarifas, garantizadas."
     >
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 mb-8">
+      <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 mb-8">
         {CARDS_INFO.map((card) => (
           <Card key={card.id} {...card} />
         ))}
-      </div>
+      </section>
       <Title title="¿Que hacer en Churín?" />
       <CardOverlay
         title="Aguas Termomediciales"

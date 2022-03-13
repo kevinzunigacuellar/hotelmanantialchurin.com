@@ -9,9 +9,9 @@ interface CardProps {
 }
 export default function Card({ img, title, description, url }: CardProps) {
   return (
-    <div className="bg-white rounded-md shadow overflow-hidden">
+    <article className="bg-white rounded-md shadow overflow-hidden">
       <div className="sm:flex lg:block">
-        <div className="block sm:w-1/2 lg:w-auto">
+        <figure className="block sm:w-1/2 lg:w-auto">
           <Image
             className="h-full w-full aspect-video"
             src={img}
@@ -20,7 +20,7 @@ export default function Card({ img, title, description, url }: CardProps) {
             objectFit="cover"
             placeholder="blur"
           />
-        </div>
+        </figure>
         <div className="p-8 sm:w-1/2 lg:w-full">
           {url ? (
             <Link href={url}>
@@ -36,6 +36,6 @@ export default function Card({ img, title, description, url }: CardProps) {
           <p className="mt-2 text-gray-500 text-md">{description}</p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
