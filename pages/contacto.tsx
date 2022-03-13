@@ -75,14 +75,14 @@ export default function Contacto() {
             className="flex items-center p-2 hover:bg-gray-100 rounded-md space-x-3"
           >
             <FaFacebook className="h-8 w-auto text-blue-500" />
-            <p className="uppercase font-semibold tracking-wide text-sm text-gray-600">Facebook</p>
+            <p className="text-sm text-gray-600">Facebook</p>
           </a>
           <a
             href="https://www.instagram.com/hotelmanantialchurin/"
             className="flex items-center p-2 hover:bg-gray-100 rounded-md space-x-3"
           >
             <AiOutlineInstagram className="h-8 w-auto fill-pink-600" />
-            <p className="uppercase font-semibold tracking-wide text-sm text-gray-600">Instagram</p>
+            <p className="text-sm text-gray-600">Instagram</p>
           </a>
         </div>
       </div>
