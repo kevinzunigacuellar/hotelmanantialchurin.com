@@ -9,7 +9,10 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 
 export default function Contacto() {
   return (
-    <Container title="Hotel Manantial de Churin | Contacto" description="">
+    <Container
+      title="Hotel Manantial de Churin | Contacto"
+      description="Contactenos a nuestras officinas en Lima y Churin llamando al teléfono +51992755015"
+    >
       <Title title="Contacto" />
       <section className="bg-white p-6 shadow rounded-md mb-8">
         <h2 className="text-lg font-semibold mb-2 text-gray-900">¿Cómo hacer una reserva?</h2>

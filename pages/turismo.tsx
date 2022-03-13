@@ -26,7 +26,10 @@ function Card({ title, description, imgSrc }: { title: string; description: stri
 
 export default function Turismo() {
   return (
-    <Container title="Hotel Manantial de Churin | Turismo" description="">
+    <Container
+      title="Hotel Manantial de Churin | Turismo"
+      description="Encuentra aqui todos los destinos que debes visitar en churin"
+    >
       <Title title="¿A donde ir en Churín?" />
       <section className="grid grid-cols-1 gap-8">
         {TURISMO_CONTENT.map(({ id, ...props }) => (
