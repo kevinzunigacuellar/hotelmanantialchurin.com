@@ -1,0 +1,98 @@
+---
+import Link from "@components/Link.astro";
+import { Icon } from "astro-icon";
+
+interface Props {
+  title?: string;
+  description?: string;
+  heroImage?: string;
+  imageAlt?: string;
+  pubDate?: string;
+}
+
+const defaultMeta = {
+  title: "Hotel Manantial",
+  description: "Alguna descripcion",
+  image: "/static/banner.png",
+  imageAlt: "Photo of the author smiling",
+};
+
+const {
+  title = defaultMeta.title,
+  description = defaultMeta.description,
+  heroImage = defaultMeta.image,
+  imageAlt = defaultMeta.imageAlt,
+  pubDate,
+} = Astro.props;
+
+// const socialImageURL = new URL(heroImage, Astro.site);
+// const canonicalURL = new URL(Astro.url).href;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="canonical" href={canonicalURL} /> -->
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content={canonicalURL} /> -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <!-- <meta property="og:image" content={socialImageURL} /> -->
+    <!-- <meta property="og:site_name" content={author} /> -->
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- <meta property="twitter:url" content={canonicalURL} /> -->
+    <!-- <meta name="twitter:site" content={twitter} /> -->
+    <!-- <meta name="twitter:creator" content={twitter} /> -->
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <!-- <meta property="twitter:image" content={socialImageURL} /> -->
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="follow, index" />
+    <!-- <meta name="author" content={author} /> -->
+    {pubDate && <meta property="article:published_time" content={pubDate} />}
+  </head>
+  <body class="antialiased">
+    <header
+      class="flex justify-center md:justify-between items-center p-6"
+    >
+      <address class="hidden md:flex flex-1 not-italic">
+        <a href="https://goo.gl/maps/PPzMb24aqDhJo91P8" class="inline-flex gap-3 text-gray-500 hover:text-gray-900">
+        <Icon name="pin" class="w-6" />
+          <p class="flex flex-col">
+          <span>Av. Larco Herrera 138</span><span>Churin, Peru</span>
+          </p>
+        </a>
+      </address>
+      <Icon name="logo" class="w-64" />
+      <address class="hidden md:flex justify-end flex-1 not-italic">
+        <a href="tel:012373052" class="inline-flex gap-3 text-gray-500 hover:text-gray-900">
+        <Icon name="chat" class="w-6" />
+        <p class="flex flex-col">
+          <span>Línea fija</span>
+          <span>+51 1 237 3052</span>
+        </p>
+        </a>
+      </address>
+    </header>
+    <nav>
+      <ul class="flex items-center justify-center bg-amber-500">
+        <li class="flex">
+          <Link href="/habitaciones" text="habitaciones"></Link>
+        </li>
+        <li class="flex">
+          <Link href="/servicios" text="servicios"></Link>
+        </li>
+      </ul>
+    </nav>
+    <main class="">
+      <slot />
+    </main>
+  </body>
+</html>
