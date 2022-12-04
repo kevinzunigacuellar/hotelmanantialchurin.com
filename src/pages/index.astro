@@ -1,38 +1,52 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { Picture } from '@astrojs/image/components';
-import doblePremium from '@images/doble-premium.jpeg';
-import suiteMatrimonial from '@images/suite-matrimonial.jpeg';
+import { Picture } from "@astrojs/image/components";
+import doblePremium from "@images/doble-premium.jpeg";
+import suiteMatrimonial from "@images/suite-matrimonial.jpeg";
 ---
 
 <Layout>
-<section>
-<h2 class="font-semibold text-xl sm:text-2xl mb-4">Habitaciones</h2>
-<ul class="flex md:flex-row flex-col gap-8">
-	<li>
-		<Picture
-      src={doblePremium}
-      class="rounded-md overflow-hidden w-full aspect-[6/4]"
-      alt="Habitación doble premium"
-      aspectRatio="6:4"
-      widths={[600, 800, 1000, 1200]}
-      sizes="(max-width: 800px) 90vw, 600px"
-    />
-		<h3 class="font-semibold text-lg sm:text-xl mt-3 sm:mt-4">Doble Premium</h3>
-		<p class="md:mt-1 text-gray-600">Dos camas queen</p>
-	</li>
-	<li>
-		<Picture
-      src={suiteMatrimonial}
-      class="rounded-md overflow-hidden w-full aspect-[6/4]"
-      alt="Habitación suite matrimonial"
-      aspectRatio="6:4"
-      widths={[600, 800, 1000, 1200]}
-      sizes="(max-width: 800px) 90vw, 600px" 
-    />
-		<h3 class="font-semibold text-lg sm:text-xl mt-3 sm:mt-4">Doble Premium</h3>
-		<p class="md:mt-1 text-gray-600">Una cama king</p>
-	</li>
-</ul>
-</section>
+  <section>
+    <h2 class="font-semibold text-xl sm:text-2xl mb-4">Habitaciones</h2>
+    <ul class="flex md:flex-row flex-col gap-8">
+      <li class="relative">
+        <Picture
+          src={doblePremium}
+          class="rounded-md overflow-hidden w-full aspect-[6/4]"
+          alt="Habitación doble premium"
+          aspectRatio="6:4"
+          widths={[600, 800, 1000, 1200]}
+          sizes="(max-width: 800px) 90vw, 600px"
+        />
+        <h3 class="font-semibold text-lg sm:text-xl mt-3 sm:mt-4">
+          <a class="" href="/habitaciones/doble-premium/">Doble Premium</a>
+        </h3>
+        <p class="md:mt-1 text-gray-600">Dos camas queen</p>
+      </li>
+      <li class="relative">
+        <Picture
+          src={suiteMatrimonial}
+          class="rounded-md overflow-hidden w-full aspect-[6/4]"
+          alt="Habitación suite matrimonial"
+          aspectRatio="6:4"
+          widths={[600, 800, 1000, 1200]}
+          sizes="(max-width: 800px) 90vw, 600px"
+        />
+        <h3 class="font-semibold text-lg sm:text-xl mt-3 sm:mt-4">
+          <a class="" href="/habitaciones/suite-matrimonial/"
+            >Suite Matrimonial
+          </a>
+        </h3>
+        <p class="md:mt-1 text-gray-600">Una cama king</p>
+      </li>
+    </ul>
+  </section>
 </Layout>
+
+<style>
+  h3 a::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+  }
+</style>

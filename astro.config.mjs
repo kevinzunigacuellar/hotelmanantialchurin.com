@@ -3,7 +3,10 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 
 export default defineConfig({
-  integrations: [tailwind(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  })],
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+  ],
 });
